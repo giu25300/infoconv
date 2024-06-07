@@ -31,17 +31,6 @@
         </repository>
     </repositories>
 
-    <distributionManagement>
-        <repository>
-            <id>sefin</id>
-            <url>http://nexus.sefin.goiania.go.gov.br:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>sefin</id>
-            <url>http://nexus.sefin.goiania.go.gov.br:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <dependencies>
         <dependency>
             <groupId>javax.xml.bind</groupId>
@@ -69,17 +58,6 @@
         <!-- Maven will append the version to the finalName (which is the name
             given to the generated war, and hence the context root) -->
         <finalName>${project.artifactId}</finalName>
-        <!--		<resources>-->
-        <!--			<resource>-->
-        <!--				<directory>src/main/resources-env/${env}</directory>-->
-        <!--				<filtering>false</filtering>-->
-        <!--			</resource>-->
-        <!--			<resource>-->
-        <!--				<filtering>false</filtering>-->
-        <!--				<directory>src/main/resources</directory>-->
-        <!--			</resource>-->
-        <!--		</resources>-->
-
         <testResources>
             <testResource>
                 <filtering>false</filtering>
@@ -109,7 +87,6 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-<!--                    <finalName>github-user-repositories</finalName>-->
                     <appendAssemblyId>false</appendAssemblyId>
                 </configuration>
                 <executions>
